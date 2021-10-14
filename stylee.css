@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Montserrat, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:root{
+    --color-red: red;
+    --black: black;
+    --white: white;
+    --gradient:  rgba(red, green, blue, alpha);
+}
+.navbar{
+    padding: 1% 5%;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+.hero-page{
+    padding: 3% 5%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/lechon-kirb-_BPtSVGCDRA-unsplash.jpg);
+    background-size: cover;
+}
+.landing-box{
+    z-index: 1;
+    position: absolute;
+    top: 35%;
+    color: var(--black);
+    line-height: 2;
+    width: 45%;
+}
+.landing-box h1{
+    font-size: 4rem;
+}
+.landing-box p{
+    font-size: 1.5rem;
+}
+.icons{
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4);
+    cursor: pointer;
+    height: 90vh;
+    text-align: center;
+}
+.icons .fa{
+    width: 50%;
+    height: 100px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-page{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+    }
+    .landing-box {
+        z-index: 1;
+        position: absolute;
+        top: 35%;
+        color: var(--black);
+        line-height: 2;
+        width: 65%;
+    }
+    .icons {
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .icons .fa {
+        width: 50%;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-page{
+        background-size: contain;
+        width: 100%;
+        max-height: 516px;
+        position: relative;
+        background-image: url(./images/lechon-kirb-_BPtSVGCDRA-unsplash.jpg);
+        background-repeat: no-repeat;
+    }
+    .landing-box {
+        text-align: center;
+        position: absolute;
+        transform: translateY(120px);
+        color: var(--black);
+        line-height: 1.5;
+        width: 90%;
+    }
+    .landing-box h1{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .landing-box p{
+        font-size: 1rem;
+    }
+    .icons {
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        left: 10px;
+    }
+    .icons .fa {
+        height: 50px;
+        margin: auto;
+    }
+    .btn-group-lg>.btn, .btn-lg {
+        padding: .3rem .6rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .3rem;
+    }
+    .fa-2x {
+        font-size: 1.2em;
+    }
+}
+
+.be-discovered{
+    padding: 3% 5%;
+    background-color: #343a40;
+    color: #fff;
+    width: 100%;
+    height: 400px;
+}
+.discovered{
+    width: 0;
+    color: orange;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.discovered h1{
+font-size: 2.5rem;
+}
+
+/*.discovered h1:hover{
+    transition: 1s ease-out;
+    transform: translateX(500px);
+    cursor: pointer;
+}*/
+.discovered p{
+    font-size: 1.5rem;
+}
+/*.discovered p:hover {
+    transition: 1s ease-out;
+    transform: translateX(-500px);
+    cursor: pointer;
+}*/
+.text{
+    display: none;
+    width: 85% ;
+}
+.text2{
+    display: block;
+    position: absolute;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+@-webkit-keyframes slide {
+    100% {left: 0;
+    }
+}
+@keyframes slide{
+    20%{
+        left: 0;
+        width: 50%
+    }
+    100% {left: 0;
+    width: 100%;
+    }
+}
+.text:hover{
+    transition: 1s;
+    left: 0;
+}
+.about{
+    padding: 3% 5%;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+.gallery-text{
+    text-align: center;
+}
+.gallery-text p{
+    color: orange;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.gallery-text h2{
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    line-height: 2;
+}
+.box-team-header-content{
+    width: "27%";
+    height: "450px";
+}
+.img-fluid{
+    border-radius: 20px;
+}
+.box-team.main{
+    transition: ease 0.5s;
+}
+.box-team.main:hover{
+    transform: translateY(50px);
+}
+.box-team{
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .home{
+        display: grid;
+    }
+    .col-md-6 {
+        max-width: 90%;
+        margin: auto;
+    }
+    .gallery-text h2 {
+        font-weight: bold;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+    .box-team-title{
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 3% 0;
+        line-height: 1.5;
+    }
+    h4 a{
+        text-decoration: none;
+    }
+}
+
+.offers{
+    background-image: url(./images/breakreate-A_IfOgYEQU4-unsplash.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+    position: relative;
+}
+.offers-text{
+    text-align: center;
+    color: var(--white);
+    right: 2%;
+    top: 23%;
+    position: absolute;
+}
+.offers-text2{
+    text-align: center;
+    color: var(--white);
+    left: 2%;
+    bottom: 8%;
+    position: absolute;
+}
+.offers-text h1,
+.offers-text2 h1{
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 2;
+}
+.offers-text p,
+.offers-text2 p{
+    font-size: 3.5rem;
+}
+
+@media (max-width: 768px) {
+    .offers-text {
+        text-align: center;
+        color: var(--white);
+        right: 2%;
+        top: 0;
+        position: absolute;
+    }
+    .offers-text h1,
+    .offers-text2 h1{
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 2;
+    }
+    .offers-text p,
+    .offers-text2 p{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 425px) {
+    .offers {
+        background-image: url(./images/breakreate-A_IfOgYEQU4-unsplash.jpg);
+        width: 100%;
+        max-height: 516px;
+        background-size: contain;
+        margin-top: 30px;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .offers-text {
+        color: #007bff;
+        width: 88%;
+        padding: 1% 5%;
+        transform: translateY(-70px);
+        line-height: 1;
+    }
+    .offers-text2{
+        color: #007bff;
+        width: 88%;
+        padding: 1% 5%;
+        transform: translateY(70px);
+        line-height: 1;
+    }
+    .offers-text h1,
+    .offers-text2 h1{
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+    .offers-text p,
+    .offers-text2 p{
+        font-size: 1;
+    }
+}
