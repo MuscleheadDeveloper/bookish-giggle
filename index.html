@@ -57,17 +57,22 @@
       <div class="discovered" id="discover">
         <p class="ptag">be</p>
         <h1 class="htag">DISCOVERED</h1>
+        <button type="button" class="btn btn-outline-primary" onclick="()=>{handleDlete()}">
+          Find Out More
+        </button>  
       </div>
-      <div class="text" id="text">
+      <div class="before"></div>
+      <div class="text" onscroll="handleDelete()" id="text">
+        
         <p>The Family Home is aimed at providing young and aspiring models with a platform
           to achieve their goals and objectives. The brand seeks to promote models by working
           with local brands as well aspromoting models internationally with foreign brands,
           seek out creative ways of promoting their corporate creative enterprises.
         </p>
-        <p>
+        <span>
           With partners in New York, London, Paris, Milan; Beth focuses on discovering new talent
           and transforming them into working superstars.
-        </p>
+        </span>
       </div>
     </div>
     <div class="about">
@@ -168,8 +173,6 @@
     </div>
 
     <div class="offers">
-      <div class="offers-text">
-        <h1>FIRST MONTH'S RENT</h1>
         <p>on us, for you.</p>
         <button type="button" class="btn btn-lg btn-outline-primary text-dark">FREE</button>
       </div>

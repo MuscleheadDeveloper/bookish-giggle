@@ -38,7 +38,12 @@ inputText.addEventListener('click', submit=()=>{
     document.querySelector('.ptag').innerHTML=items.value;
     item.push(document.querySelector('.ptag').innerHTML)
     console.log(item);
-})
-
-
-
+})  
+var textDoc = document.querySelector('.text');
+let pDoc = document.getElementsByTagName('p');
+textDoc.addEventListener('scroll', handleDelete);    
+handleDelete=()=>{
+(textDoc)?textDoc.classList.add('text2'):textDoc.classList.remove('text2');
+pDoc? pDoc.classList.add(`text2 p`) : pDoc.classList.remove(`text2 p`);
+//pDoc? pDoc.classList.add(`text2 p::before`) : pDoc.classList.remove(`text2 p::before`);
+}
